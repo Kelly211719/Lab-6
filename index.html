@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Lab 6 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+void setup(){
+
+size(500, 600);
+frameRate( 30 );
+f = createFont("Times New Roman",20,true);
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	fill(255,255,255);
+	rect(200-50,150,200,100);
+	
+	fill (255,255,255);
+	textSize(18);
+	text("Index",50,50);
+	
+	// text can be center by using textAlign(CENTER,LEFT,RIGHT)
+	// Proceed to 6a
+	textFont(f,20);
+	fill(0,0,0);
+	text("Proceed to Lab 6a",200-25,170+35);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{ 
+		if (mouseX > 150 && mouseX < 150+200 && 
+			mouseY > 150 && mouseY < 150+100)
+		{
+			link("Lab 6a.html");
+		}
+	}
+	
+	
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
